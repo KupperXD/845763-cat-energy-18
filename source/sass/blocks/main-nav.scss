@@ -1,0 +1,17 @@
+.main-nav {
+  .main-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-nav__item {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .main-nav__link {
+    color: #000;
+  }
+}

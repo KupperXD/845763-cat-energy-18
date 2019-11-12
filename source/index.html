@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>CAT Energy</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header-page">
@@ -14,15 +15,15 @@
       <button class="main-nav__toggle" type="button">
       Открыть меню</button>
       <ul class="main-nav__list ">
-        <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
-        <li class="main-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="main-nav__item"><a href="form.html">Подбор программы</a></li>
+        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">Главная</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
   <main class="main-page">
     <h1 class="visually-hidden">CAT Energy магазин функциональной еды для котов</h1>
-    <section class="promo">
+    <section class="promo main-page__promo">
       <h2 class="promo__title">Функциональное питание для котов</h2>
       <p class="promo__slogan">Занялся собой? Займись котом!</p>
       <img class="promo__image" src="#" alt="Баночка с кормом">
@@ -43,7 +44,7 @@
         <a class="category__link" href="#">Каталог Pro</a>
       </article>
     </section>
-    <section class="advantages">
+    <section class="advantages main-page__advantages">
       <h2 class="advantages__title">Как это работает?</h2>
       <ul class="advantages__list">
         <li class="advantages__item">
@@ -70,10 +71,14 @@
       <li class="social__item"><a href="#" aria-label="CAT Energy в Фейсбук">Фейсбук</a></li>
       <li class="social__item"><a href="#" aria-label="CAT Energy в Инстрагрм">Инстраграмм</a></li>
     </ul>
-    <a class="footer-page__copyright copyright" href="htmlacademy.ru/intensive/adaptive">
-      <b class="copyright__title">Html Academy</b>
-      <img class="copyright__icon" src="#" alt="Логотип htmlacademy">
-    </a>
+    <div class="footer-page__copyright copyright">
+      <a class="copyright__link" href="htmlacademy.ru/intensive/adaptive">
+        HTML Academy
+      </a>
+      <a class="copyright__link" href="htmlacademy.ru/intensive/adaptive">
+        <img class="copyright__icon" src="#" alt="Логотип htmlacademy">
+      </a>
+    </div>
   </footer>
 </body>
 </html>

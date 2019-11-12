@@ -1,3 +1,54 @@
-body {
-  background: red;
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "blocks/header-page.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main-page.scss";
+@import "blocks/promo.scss";
+@import "blocks/button.scss";
+@import "blocks/category.scss";
+@import "blocks/advantages.scss";
+@import "blocks/footer-page.scss";
+@import "blocks/copyright.scss";
+@import "blocks/catalog.scss";
+@import "blocks/catalog-item.scss";
+@import "blocks/additionally.scss";
+
+html {
+  box-sizing: border-box;
 }
+
+*, *::before, *::after {
+ box-sizing: inherit;
+  }
+
+body {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect( 0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+
