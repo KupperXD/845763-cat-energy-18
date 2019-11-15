@@ -1,9 +1,6 @@
-.advantages {
-}
-
 .advantages__title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 28px;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
@@ -11,12 +8,11 @@
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
+  padding-left: 80px;
 }
 
 .advantages__item {
-  font-family: "Arial", sans-serif;
-  color: #444;
+  margin-bottom: 20px;
+  font-family: $second-font;
 }

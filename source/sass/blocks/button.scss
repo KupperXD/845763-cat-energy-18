@@ -1,6 +1,5 @@
 .button {
-  margin: 0;
-  padding: 0;
+  @include button-reset;
   background-color: #68b738;
   color: #fff;
   text-transform: uppercase;
