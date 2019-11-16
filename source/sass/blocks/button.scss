@@ -1,0 +1,11 @@
+.button {
+  @include button-reset;
+  background-color: #68b738;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.button--silver {
+  background-color: #f2f2f2;
+  color: #444444;
+}

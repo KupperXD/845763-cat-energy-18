@@ -1,0 +1,18 @@
+.main-nav__toggle {
+  @include button-reset;
+}
+
+.main-nav__list {
+  @include list-reset;
+  }
+
+.main-nav__item {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+ }
+
+.main-nav__link {
+  color: #000;
+ }
+

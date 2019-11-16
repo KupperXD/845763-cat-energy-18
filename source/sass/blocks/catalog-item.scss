@@ -1,0 +1,19 @@
+.catalog-item {
+  padding: 25px 20px;
+}
+
+.catalog-item__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.catalog-item__value,
+.catalog-item__field {
+  font-family: $second-font;
+  font-size: 12px;
+  line-height: 16px;
+}
