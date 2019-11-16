@@ -1,5 +1,63 @@
 .header-page {
   padding-top: 10px;
   background-color: white;
-  outline: 2px solid red;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 23px;
+  }
+}
+
+.header-page__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin-bottom: 30px
+  }
+}
+
+.header-page__first-line {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.header-page__toggle {
+  @include button-reset;
+  position: relative;
+  width: 24px;
+  height: 18px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+
+    background-image: url(../img/svg/icon-close.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    cursor: pointer;
+  }
 }
