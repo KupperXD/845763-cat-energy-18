@@ -1,13 +1,57 @@
+.additionally {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: 1px solid #ededed;
+}
+
+.additionally__icon {
+  position: relative;
+  display: block;
+  width: 31px;
+  height: 31px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+    opacity: 0.2;
+
+    background-color: #222;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
 .additionally__title {
+  display: block;
+
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #000;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .additionally__description {
+  margin-bottom: 25px;
+
   font-family: $second-font;
   font-size: 12px;
   line-height: 16px;
+
+  text-align: center;
 }
+

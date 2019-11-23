@@ -17,7 +17,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 
   font-size: 20px;
   line-height: 20px;
@@ -27,23 +27,48 @@
 
   color: #000;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 12px 0;
 
-    border-top: none;
+    border-bottom: none;
 
     font-size: 18px;
     line-height: 25px;
+    font-weight: 400;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 20px;
-  }
+    position: relative;
+    z-index: 10;
 
-  &--active {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+  }
+ }
+
+ .main-nav__link--active {
+    &:hover,
+    &:focus,
+    &active {
+      opacity: 1;
+    }
+
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid #68b738;
-   }
-  }
+    }
+
+    @media (min-width: $desktop-width) {
+      border-color: #fff;
+    }
  }
 

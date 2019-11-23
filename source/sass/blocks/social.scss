@@ -1,8 +1,36 @@
 .social {
   @include list-reset;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 93px;
+  padding-right: 103px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
   background-color: #f2f2f2;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: 126px;
+
+    border: none;
+  }
 }
 
 .social__link {
   color: #666;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
