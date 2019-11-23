@@ -5,6 +5,13 @@
   padding-right: 20px;
 
   border: 1px solid #ededed;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 40px;
+  }
 }
 
 .additionally__icon {
@@ -15,6 +22,12 @@
   margin: 0 auto;
   margin-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
+    width: 61px;
+    height: 61px;
+    margin-bottom: 50px;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -24,9 +37,7 @@
     width: 100%;
     height: 2px;
 
-    opacity: 0.2;
-
-    background-color: #222;
+    background-color: #e6e6e6;
   }
 
   &::after {
@@ -43,6 +54,15 @@
   color: #000;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+
+    font-size: 20px;
+  }
 }
 
 .additionally__description {
@@ -53,5 +73,19 @@
   line-height: 16px;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+
+    font-size: 16px;
+  }
+}
+
+.additionally__btn {
+  @media (min-width: $tablet-width) {
+    width: 250px;
+  }
 }
 

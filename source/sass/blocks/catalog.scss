@@ -1,2 +1,11 @@
+.catalog__item {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 140px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
 
 

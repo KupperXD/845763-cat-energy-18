@@ -56,6 +56,16 @@
   }
  }
 
+ .main-nav__link--black {
+  @media (min-width: $tablet-width) {
+    color: black;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: black;
+  }
+ }
+
  .main-nav__link--active {
     &:hover,
     &:focus,
