@@ -1,8 +1,6 @@
-
 .category__wrapper {
   padding-left: 20px;
   padding-right: 20px;
-  height: auto;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -11,6 +9,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -97,7 +96,7 @@
     left: 8px;
     width: 35px;
     height: 49px;
-    background-image: url(../img/svg/icon-cat-slim.svg);
+    background-image: url("../img/svg/icon-cat-slim.svg");
 
     @media (min-width: $tablet-width) {
     top: -20px;
@@ -119,7 +118,7 @@
     top: 5px;
     width: 67px;
     height: 28px;
-    background-image: url(../img/svg/icon-cat-pro.svg);
+    background-image: url("../img/svg/icon-cat-pro.svg");
 
     @media (min-width: $tablet-width) {
     top: 55px;
@@ -181,7 +180,7 @@
     top: 6px;
     width: 25px;
     height: 12px;
-    background-image: url(../img/svg/icon-right-arrow-long.svg);
+    background-image: url("../img/svg/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 
@@ -198,7 +197,7 @@
   &:hover::before {
     right: -48px;
     width: 32px;
-    background-image: url(../img/svg/icon-right-arrow-verylong.svg);
+    background-image: url("../img/svg/icon-right-arrow-verylong.svg");
 
     transition-duration: 0.3s;
     transition-timing-function: ease-in;

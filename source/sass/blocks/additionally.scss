@@ -1,52 +1,39 @@
 .additionally {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  position: relative;
+  padding: 83px 20px 25px;
 
   border: 1px solid #ededed;
 
   @media (min-width: $tablet-width) {
     width: 324px;
-    padding-left: 37px;
-    padding-right: 37px;
-    padding-bottom: 40px;
-  }
-}
-
-.additionally__icon {
-  position: relative;
-  display: block;
-  width: 31px;
-  height: 31px;
-  margin: 0 auto;
-  margin-bottom: 25px;
-
-  @media (min-width: $tablet-width) {
-    width: 61px;
-    height: 61px;
-    margin-bottom: 50px;
+    padding: 166px 37px 40px;
   }
 
   &::before,
   &::after {
     position: absolute;
     content: "";
-    top: 50%;
-    left: 0;
-    width: 100%;
+    top: 45px;
+    left: 50%;
+    width: 31px;
     height: 2px;
-
+    margin-left: -15.5px;
     background-color: #e6e6e6;
-  }
 
+    @media (min-width: $tablet-width) {
+      top: 85px;
+      width: 61px;
+      margin-left: -30.5px;
+    }
+  }
   &::after {
     transform: rotate(90deg);
   }
 }
 
+
 .additionally__title {
-  display: block;
+  margin: 0;
 
   font-size: 16px;
   line-height: 20px;
@@ -56,36 +43,29 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    display: block;
-    width: 140px;
-    margin: 0 auto;
     margin-bottom: 28px;
+    padding: 0 40px;
 
     font-size: 20px;
   }
 }
 
 .additionally__description {
+  margin: 0;
   margin-bottom: 25px;
 
   font-family: $second-font;
   font-size: 12px;
   line-height: 16px;
-
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 170px;
-    margin: 0 auto;
+    margin: 0;
     margin-bottom: 85px;
+    padding: 0 40px;
 
     font-size: 16px;
   }
 }
 
-.additionally__btn {
-  @media (min-width: $tablet-width) {
-    width: 250px;
-  }
-}
 
