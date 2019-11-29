@@ -2,10 +2,9 @@
   @include list-reset;
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-left: 93px;
-  padding-right: 103px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -15,9 +14,16 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    width: 126px;
 
     border: none;
+  }
+}
+
+.social__item {
+  margin: 5px 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 5px 14px;
   }
 }
 
@@ -32,5 +38,28 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+
+// Увеличиваю размер эконок соц сетей.
+.social__image--vk {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 16px;
+  }
+}
+
+.social__image--inst {
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__image--fb {
+  @media (min-width: $tablet-width) {
+    width: 14px;
+    height: 28px;
   }
 }

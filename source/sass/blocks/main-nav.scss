@@ -1,21 +1,30 @@
 .main-nav__list {
   @include list-reset;
   @media (min-width: $tablet-width) {
-    width: 440px;
+   // убрал ширину по советам наставника width: 440px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {
-    width: 478px;
+    // Задал макс ширину что бы если пункт меню будет слишком широкий он не выпадал из зелёного фона и был всегда виден.
+    max-width: 610px;
+  }
+}
+
+// Добавляет отступ справа для пунктов меню в навигации шапки, но у последнего пункта отступа нету.
+.main-nav__item {
+  @media (min-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
   }
 }
 
 .main-nav__link {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 
   border-bottom: 1px solid #e6e6e6;
 
@@ -27,12 +36,12 @@
 
   color: #000;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.6;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 
@@ -52,33 +61,21 @@
 
     font-size: 20px;
     font-weight: 400;
-    color: #fff;
-  }
- }
-
- .main-nav__link--black {
-  @media (min-width: $tablet-width) {
-    color: black;
-  }
-
-  @media (min-width: $desktop-width) {
-    color: black;
   }
  }
 
  .main-nav__link--active {
-    &:hover,
-    &:focus,
-    &active {
-      opacity: 1;
-    }
-
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid #68b738;
     }
+ }
 
-    @media (min-width: $desktop-width) {
-      border-color: #fff;
-    }
+
+// На главной странице у пунктов меню на десктопе должен быть белый цвет текста и подчёркивания, что отличается от остальных страниц.
+ .main-nav__link--index {
+  @media (min-width: $desktop-width) {
+    color: #fff;
+    border-color: #fff;
+  }
  }
 

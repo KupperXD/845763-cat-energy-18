@@ -24,14 +24,29 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 81px;
-    padding-bottom: 62px;
-    padding-left: 55px;
+    padding: 81px 275px 62px 55px;
   }
 
   @media (min-width: $desktop-width) {
     width: 570px;
     margin: 0;
+    padding-right: 56px;
+  }
+
+
+// Добавляет отступ сверху в случае если на десктопе появится больше двух карточек.
+  &:nth-of-type(n+3) {
+    @media (min-width: $desktop-width) {
+      margin-top: 20px;
+    }
+  }
+}
+
+// Так как в одной карточке картинка кота больше в ширину - что бы добиться соответсвию макету и что бы при переполнение этой карточки текст не залезал на картинку
+// Добавил модификатор в котором увеличил падинг справа от стандартного.
+.category__item--pro {
+  @media (min-width: $tablet-width) and (max-width: 1299px) {
+    padding-right: 310px;
   }
 }
 
@@ -48,9 +63,9 @@
   word-wrap: break-word;
 
   @media (min-width: $tablet-width) {
-  padding: 0;
-  font-size: 36px;
-  text-align: left;
+    padding: 0;
+    font-size: 36px;
+    text-align: left;
   }
 
   @media (min-width: $desktop-width) {
@@ -146,7 +161,6 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    width: 372px;
     margin-bottom: 61px;
     padding: 0;
     font-size: 16px;
@@ -162,6 +176,7 @@
 
 .category__link {
   position: relative;
+  padding-right: 49px;
 
   font-size: 16px;
   line-height: 16px;
@@ -173,34 +188,28 @@
     line-height: 20px;
   }
 
+
+// Рисует стрелку при наведении, нужно придумать ещё трансформацию что бы было плавно и не дёргалось.
   &::before {
     position: absolute;
     content: "";
-    right: -40px;
-    top: 6px;
+    right: 10px;
+    top: 50%;
     width: 25px;
     height: 12px;
     background-image: url("../img/svg/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-
-    @media (min-width: $tablet-width) {
-      top: 10px;
-      width: 24px;
-      height: 11px;
-    }
+    transform: translateY(-50%);
   }
 
-  &:hover::before {
-    right: -48px;
-    width: 32px;
+  &:hover:before {
+    right: 0;
+    width: 35px;
     background-image: url("../img/svg/icon-right-arrow-verylong.svg");
 
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
+    transform: translateY(-50%);
   }
 
   &:active {

@@ -11,7 +11,7 @@
     height: 305px;
 
     background-color: #65a93c;
-    background-image: url(../img/index-background-mobile@1x.jpg);
+    background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
 
@@ -20,16 +20,6 @@
 
     @media (min-width: $tablet-width) {
       display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: block;
-      left: 50%;
-      top: -180px;
-      width: 50%;
-      height: 700px;
-      background-image: url(../img/index-background-desktop@1x.jpg);
-      background-position: 0 0;
     }
   }
 }
