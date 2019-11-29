@@ -1,4 +1,65 @@
 .social {
   @include list-reset;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
   background-color: #f2f2f2;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.social__item {
+  margin: 5px 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 5px 14px;
+  }
+}
+
+.social__link {
+  color: #666;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+
+// Увеличиваю размер эконок соц сетей.
+.social__image--vk {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 16px;
+  }
+}
+
+.social__image--inst {
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__image--fb {
+  @media (min-width: $tablet-width) {
+    width: 14px;
+    height: 28px;
+  }
 }

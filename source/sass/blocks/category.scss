@@ -1,27 +1,218 @@
+.category__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
 .category__item {
   margin-bottom: 20px;
   padding: 25px 22px;
+
   background-color: #f2f2f2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 81px 275px 62px 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin: 0;
+    padding-right: 56px;
+  }
+
+
+// Добавляет отступ сверху в случае если на десктопе появится больше двух карточек.
+  &:nth-of-type(n+3) {
+    @media (min-width: $desktop-width) {
+      margin-top: 20px;
+    }
+  }
+}
+
+// Так как в одной карточке картинка кота больше в ширину - что бы добиться соответсвию макету и что бы при переполнение этой карточки текст не залезал на картинку
+// Добавил модификатор в котором увеличил падинг справа от стандартного.
+.category__item--pro {
+  @media (min-width: $tablet-width) and (max-width: 1299px) {
+    padding-right: 310px;
+  }
 }
 
 .category__title {
+  position: relative;
   margin: 0;
   margin-bottom: 25px;
+  padding-left: 72px;
   font-size: 24px;
   line-height: 37px;
+  font-weight: 400;
   color: #000;
   text-transform: uppercase;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 36px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+    padding-left: 156px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: -8px;
+    left: 0;
+  }
+
+  &::before {
+    width: 50px;
+    height: 50px;
+    background-color: #68b738;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      left: 400px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -30px;
+      left: 0 ;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--slim::after {
+    top: -10px;
+    left: 8px;
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/svg/icon-cat-slim.svg");
+
+    @media (min-width: $tablet-width) {
+    top: -20px;
+    left: 430px;
+    width: 141px;
+    height: 194px
+    }
+
+    @media (min-width: $desktop-width) {
+    top: -35px;
+    left: 16px;
+    width: 71px;
+    height: 97px;
+    }
+  }
+
+  &--pro::after {
+    left: -9px;
+    top: 5px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/svg/icon-cat-pro.svg");
+
+    @media (min-width: $tablet-width) {
+    top: 55px;
+    left: 350px;
+    width: 268px;
+    height: 113px;
+    }
+
+    @media (min-width: $desktop-width) {
+    top: -10px;
+    left: -19px;
+    width: 134px;
+    height: 57px;
+    }
+  }
 }
 
 .category__description {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 23px;
+
   font-family: $second-font;
+
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 61px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 462px;
+    margin-bottom: 35px;
+  }
 }
 
 .category__link {
+  position: relative;
+  padding-right: 49px;
+
   font-size: 16px;
   line-height: 16px;
   color: #000;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+
+// Рисует стрелку при наведении, нужно придумать ещё трансформацию что бы было плавно и не дёргалось.
+  &::before {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    width: 25px;
+    height: 12px;
+    background-image: url("../img/svg/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    transform: translateY(-50%);
+  }
+
+  &:hover:before {
+    right: 0;
+    width: 35px;
+    background-image: url("../img/svg/icon-right-arrow-verylong.svg");
+
+    transform: translateY(-50%);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

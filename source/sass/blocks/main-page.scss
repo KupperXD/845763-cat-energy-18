@@ -1,21 +1,46 @@
 .main-page {
   background-color: #fff;
-  outline: 2px solid #666;
 }
 
 .main-page__title {
   margin: 0;
-  padding-top: 18px;
+  margin-bottom: 35px;
+  padding: 18px 10px 0px;
+
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
   color: #000;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-bottom: 156px;
+    font-size: 60px;
+    text-align: left;
+  }
 }
 
 .main-page__promo {
   margin-bottom: 23px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.main-page__category {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 51px;
+  }
 }
 
 .main-page__advantages {
   margin-bottom: 25px;
+}
+
+.main-page__catalog {
+  margin-bottom: 31px;
 }
