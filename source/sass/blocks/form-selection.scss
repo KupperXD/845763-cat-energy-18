@@ -465,6 +465,11 @@
   }
 }
 
+.form-selection__input-icon:focus ~ svg,
+.form-selection__input-icon:active ~ svg {
+  color: #68b738;
+}
+
 
 .form-selection__btn {
   width: 87.5%;
