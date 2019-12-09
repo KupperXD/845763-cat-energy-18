@@ -15,8 +15,12 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
 
-
     z-index: -1;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -87,8 +91,8 @@
   }
 }
 
-.promo__link {
-  display: flex;
+.promo__image {
+  display: block;
   width: 280px;
   margin: 0 auto;
 
@@ -102,6 +106,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 499px;
     top: -80px;
     margin-left: -155px;
   }

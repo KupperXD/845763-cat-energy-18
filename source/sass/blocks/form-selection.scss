@@ -1,0 +1,503 @@
+.form-selection__wrapper {
+ @media (min-width: $tablet-width) {
+  padding: 0 37px;
+ }
+
+ @media (min-width: $desktop-width) {
+  padding: 0;
+ }
+}
+
+
+.form-selection__div {
+  min-width: 320px;
+
+  margin: 0;
+  padding: 0 20px;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.form-selection__list {
+  @include list-reset;
+}
+
+.form-selection__description {
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0 20px;
+
+  line-height: 18px;
+  color: #111;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 250px 0 0;
+    margin-bottom: 69px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    padding: 0;
+  }
+}
+
+.form-selection__title {
+  padding: 0;
+  margin-bottom: 30px;
+
+  font-size: 24px;
+  line-height: 24px;
+  color: #111;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form-selection__container-info {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    min-height: 196px;
+    margin-bottom: 73px;
+  }
+}
+
+
+//Задаю стили для всех input на странице формы.
+.form-selection__div input,
+.form-selection__div textarea {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form-selection__div textarea {
+  @media (min-width: $tablet-width) {
+    line-height: 30px;
+  }
+}
+
+//Задаю стили для всех label на странице формы, так как они одинаковые.
+.form-selection__div label {
+  font-size: 16px;
+  line-height: 18px;
+  color: #222;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form-selection__main-info {
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin-bottom: 0;
+  }
+}
+
+
+.form-selection__item-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &:hover input {
+    border-color: rgba(205, 205, 205, 1);
+  }
+}
+
+
+.form-selection__item-text label {
+  margin-right: 15px;
+}
+
+.form-selection__item-text input {
+  position: relative;
+  width: 140px;
+  flex-grow: 1;
+  height: 45px;
+  padding: 0px 16px;
+
+  outline: none;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  @media (min-width: $desktop-width) {
+    height: 52px;
+  }
+}
+
+.form-selection__item-text input:focus,
+.form-selection__item-text input:active {
+  border: 2px solid #000;
+}
+
+.form-selection__item-text input::placeholder {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+
+//У двух input на странице есть эконки, задаю через модификаторы.
+.form-selection__icon-mail,
+.form-selection__icon-telephone {
+  position: absolute;
+  right: 15px;
+}
+
+.form-selection__icon-telephone {
+  right: 10px;
+}
+
+.form-selection__item-text--icon input {
+  padding-right: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
+  }
+}
+
+
+.form-selection__radio {
+  margin-bottom: 31px;
+  padding: 21px 20px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 79px;
+
+    border: 1px solid #ededed;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    padding: 24px 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+}
+
+.form-selection__item-radio {
+  display: flex;
+}
+
+.form-selection__item-radio:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+//кастомные радио.
+.form-selection__item-radio label {
+  position: relative;
+
+  padding: 6px 0 6px 46px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0 10px 56px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    border: 1px solid #cdcdcdcd;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    display: none;
+    top: 9px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 11px;
+      left: 11px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.form-selection__item-radio label:hover,
+.form-selection__item-checkbox label:hover {
+  &::before {
+    border-color: #bababa;
+  }
+}
+
+.form-selection__item-radio:active,
+.form-selection__item-checkbox:active,
+.form-selection__item-radio input:disabled + label,
+.form-selection__item-checkbox input:disabled + label {
+  opacity: 0.3;
+}
+
+
+.form-selection__radio-input:checked + label::after {
+  display: block;
+}
+
+.form-selection__item-radio input[type="radio"]:focus + label::before {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+
+.form-selection__contact,
+.form-selection__comment {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.form-selection__list-contact {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.form-selection__list-contact .form-selection__item-text {
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin-bottom: 0;
+  }
+
+  &:nth-child(n+3) {
+    @media (min-width: $desktop-width) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.form-selection__div textarea {
+  width: 100%;
+  height: 150px;
+  padding: 13px;
+
+  text-align: left;
+  border: 1px solid #cdcdcdcd;
+
+  resize: none;
+
+  @media (min-width: $tablet-width) {
+    height: 174px;
+  }
+}
+
+.form-selection__div textarea::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.form-selection__additionally {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+}
+
+.form-selection__list-additionally {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.form-selection__item-checkbox {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    width: 216px;
+  }
+}
+
+//Кастомные чекбоксы
+.form-selection__item-checkbox label {
+  position: relative;
+  padding: 6px 0 6px 46px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0 10px 56px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::before {
+    border: 1px solid #cdcdcd;
+  }
+
+  &::after {
+    display: none;
+    background-image: url("../img/svg/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 17px;
+  }
+}
+
+.form-selection__checkbox-input:checked + label::after {
+  display: block;
+}
+
+
+//Пишу отступы для разных состояния, что бы при добавлении новых пунктов выглядело красиво.
+.form-selection__item-checkbox:not(:last-child) {
+  @media (max-width: 767.9px) {
+    margin-bottom: 13px;
+  }
+}
+
+.form-selection__item-checkbox:nth-child(n+3) {
+  @media (min-width: $tablet-width) and (max-width: 1299.9px) {
+    margin-top: 31px;
+  }
+}
+
+.form-selection__item-checkbox:nth-child(2n+1) {
+  @media (min-width: $tablet-width) and (max-width: 1299.9px) {
+    margin-right: 125px;
+  }
+}
+
+.form-selection__item-checkbox:not(:nth-child(4n)) {
+  @media (min-width: $desktop-width) {
+    margin-right: 106px;
+  }
+}
+
+.form-selection__item-checkbox:nth-child(n+5) {
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
+}
+
+.form-selection__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 72px;
+  }
+}
+
+
+.form-selection__btn {
+  width: 87.5%;
+  margin: 0 auto 23px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 283px;
+    margin: 0;
+    margin-right: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+  }
+}
+
+.form-selection__sup {
+  display: block;
+  padding: 0 20px;
+  margin-bottom: 34px;
+
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+  }
+}
+
