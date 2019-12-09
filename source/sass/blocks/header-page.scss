@@ -2,7 +2,6 @@
   position: relative;
   background-color: white;
 
-
   // Добавил зелёный фон на главной странице в шапку, для того что бы пункты меню были видны при добавлении пунктов или переполнении
   &--index:before {
     @media (min-width: $desktop-width) {
@@ -17,11 +16,17 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       background-color: #65a93c;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }
 
 .header-page__wrapper {
+  min-height: 61px;
   padding-top: 10px;
 
   @media (min-width: $tablet-width) {
@@ -43,15 +48,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e6e6e6;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     border-bottom: none;
   }
 }
 
 .header-page__logo {
-
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -59,6 +63,18 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+.header-page__logo-image {
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 203px;
+    height: 60px;
   }
 }
 
@@ -120,4 +136,8 @@
       transition: top 0.3s, transform 0.3s  0.3s;
     }
   }
+}
+
+.header-page__toggle--nojs {
+  display: none;
 }

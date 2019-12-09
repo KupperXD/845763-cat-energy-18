@@ -32,6 +32,11 @@
 
 .catalog-item__image {
   @media (min-width: $tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
   }
 }
 

@@ -1,23 +1,31 @@
 .main-page {
+  flex-grow: 1;
+
   background-color: #fff;
 }
 
 .main-page__title {
   margin: 0;
   margin-bottom: 35px;
-  padding: 18px 10px 0px;
+  padding: 18px 22px 0px;
 
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
   color: #000;
-  text-align: center;
+  text-align: left;
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    margin-bottom: 156px;
+    margin-bottom: 56px;
     font-size: 60px;
     text-align: left;
+  }
+}
+
+.main-page__title--big-margin {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 156px;
   }
 }
 
