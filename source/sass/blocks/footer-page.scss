@@ -22,6 +22,7 @@
 
 .footer-page__logo {
   display: block;
+  flex-shrink: 0;
   margin-bottom: 30px;
 
   text-align: center;
@@ -46,5 +47,9 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
+}
+
+.footer-page__copyright {
+  flex-shrink: 0;
 }
 

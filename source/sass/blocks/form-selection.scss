@@ -8,7 +8,7 @@
  }
 }
 
-
+//Контейнер для групп форм.
 .form-selection__div {
   min-width: 320px;
 
@@ -50,6 +50,7 @@
   }
 }
 
+//Стили для заголовков в формах
 .form-selection__title {
   padding: 0;
   margin-bottom: 30px;
@@ -66,17 +67,7 @@
   }
 }
 
-.form-selection__container-info {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    align-items: flex-start;
-    min-height: 196px;
-    margin-bottom: 73px;
-  }
-}
-
-
-//Задаю стили для всех input на странице формы.
+//Задаю стили текста для всех input на странице формы.
 .form-selection__div input,
 .form-selection__div textarea {
   font-family: $main-font;
@@ -109,11 +100,34 @@
   }
 }
 
-.form-selection__main-info {
-  margin-bottom: 23px;
+.form-selection__item-text input::placeholder {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #444;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 72px;
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+//Дополнительный контейнер для двух групп форм, на десктопе встают в линию.
+.form-selection__container-info {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    min-height: 196px;
+    margin-bottom: 53px;
+  }
+}
+
+.form-selection__main-info {
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
   }
 
   @media (min-width: $desktop-width) {
@@ -122,25 +136,20 @@
   }
 }
 
-
 .form-selection__item-text {
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 
-  &:not(:last-child) {
-    margin-bottom: 15px;
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 20px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
   }
 
   &:hover input {
     border-color: rgba(205, 205, 205, 1);
   }
 }
-
 
 .form-selection__item-text label {
   margin-right: 15px;
@@ -166,40 +175,7 @@
   border: 2px solid #000;
 }
 
-.form-selection__item-text input::placeholder {
-  font-family: $main-font;
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #444;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 27px;
-  }
-}
-
-
-//У двух input на странице есть эконки, задаю через модификаторы.
-.form-selection__icon-mail,
-.form-selection__icon-telephone {
-  position: absolute;
-  right: 15px;
-}
-
-.form-selection__icon-telephone {
-  right: 10px;
-}
-
-.form-selection__item-text--icon input {
-  padding-right: 35px;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 50px;
-  }
-}
-
-
+//Стили для группы радио.
 .form-selection__radio {
   margin-bottom: 31px;
   padding: 21px 20px;
@@ -279,23 +255,19 @@
   }
 }
 
-.form-selection__item-radio label:hover,
-.form-selection__item-checkbox label:hover {
-  &::before {
-    border-color: #bababa;
-  }
-}
-
-.form-selection__item-radio:active,
-.form-selection__item-checkbox:active,
-.form-selection__item-radio input:disabled + label,
-.form-selection__item-checkbox input:disabled + label {
-  opacity: 0.3;
-}
-
-
 .form-selection__radio-input:checked + label::after {
   display: block;
+}
+
+
+//Задаю состояние радио баттанов при ховере/клике
+.form-selection__radio label:hover::before {
+  border-color: #bababa;
+}
+
+.form-selection__radio label:active,
+.form-selection__radio input:disabled ~ label {
+  opacity: 0.3;
 }
 
 .form-selection__item-radio input[type="radio"]:focus + label::before {
@@ -305,12 +277,16 @@
 }
 
 
-.form-selection__contact,
-.form-selection__comment {
+//Стили для полей ввода с емеилом и телефоном.
+.form-selection__contact {
   margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 69px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
   }
 }
 
@@ -326,15 +302,42 @@
 .form-selection__list-contact .form-selection__item-text {
   @media (min-width: $desktop-width) {
     width: 570px;
-    margin-bottom: 0;
-  }
-
-  &:nth-child(n+3) {
-    @media (min-width: $desktop-width) {
-      margin-top: 20px;
-    }
   }
 }
+
+//У двух input на странице есть эконки, задаю через модификаторы.
+.form-selection__icon-mail,
+.form-selection__icon-telephone {
+  position: absolute;
+  right: 15px;
+}
+
+.form-selection__icon-telephone {
+  right: 10px;
+}
+
+//Отсттуп в полях ввода что бы текст не заезжал на эконки.
+.form-selection__item-text--icon input {
+  padding-right: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
+  }
+}
+
+.form-selection__input-icon:focus ~ svg,
+.form-selection__input-icon:active ~ svg {
+  color: #68b738;
+}
+
+.form-selection__comment {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+}
+
 
 .form-selection__div textarea {
   width: 100%;
@@ -356,13 +359,21 @@
   line-height: 18px;
   color: #444;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    line-height: 30px;
+  }
 }
 
 .form-selection__additionally {
-  margin-bottom: 31px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
   }
 }
 
@@ -423,19 +434,30 @@
   display: block;
 }
 
+//Задаю состояние чекбоксов при ховере\клике
+.form-selection__item-checkbox label:hover {
+  &::before {
+    border-color: #bababa;
+  }
+}
+
+.form-selection__item-checkbox:active,
+.form-selection__item-checkbox input:disabled + label {
+  opacity: 0.3;
+}
+
 
 //Пишу отступы для разных состояния, что бы при добавлении новых пунктов выглядело красиво.
-.form-selection__item-checkbox:not(:last-child) {
+.form-selection__item-checkbox {
   @media (max-width: 767.9px) {
     margin-bottom: 13px;
   }
-}
 
-.form-selection__item-checkbox:nth-child(n+3) {
-  @media (min-width: $tablet-width) and (max-width: 1299.9px) {
-    margin-top: 31px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
   }
 }
+
 
 .form-selection__item-checkbox:nth-child(2n+1) {
   @media (min-width: $tablet-width) and (max-width: 1299.9px) {
@@ -449,11 +471,7 @@
   }
 }
 
-.form-selection__item-checkbox:nth-child(n+5) {
-  @media (min-width: $desktop-width) {
-    margin-top: 20px;
-  }
-}
+
 
 .form-selection__container {
   @media (min-width: $tablet-width) {
@@ -464,12 +482,6 @@
     margin-bottom: 72px;
   }
 }
-
-.form-selection__input-icon:focus ~ svg,
-.form-selection__input-icon:active ~ svg {
-  color: #68b738;
-}
-
 
 .form-selection__btn {
   width: 87.5%;
