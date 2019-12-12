@@ -1,4 +1,4 @@
-.form-selection__wrapper {
+.form__wrapper {
  @media (min-width: $tablet-width) {
   padding: 0 37px;
  }
@@ -9,7 +9,7 @@
 }
 
 //Контейнер для групп форм.
-.form-selection__div {
+.form__field {
   min-width: 320px;
 
   margin: 0;
@@ -22,11 +22,11 @@
   }
 }
 
-.form-selection__list {
+.form__list {
   @include list-reset;
 }
 
-.form-selection__description {
+.form__description {
   margin: 0;
   margin-bottom: 39px;
   padding: 0 20px;
@@ -51,25 +51,77 @@
 }
 
 //Стили для заголовков в формах
-.form-selection__title {
+.form__title {
   padding: 0;
   margin-bottom: 30px;
 
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   color: #111;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
 
     font-size: 36px;
-    line-height: 36px;
   }
 }
 
 //Задаю стили текста для всех input на странице формы.
-.form-selection__div input,
-.form-selection__div textarea {
+
+
+
+
+
+
+
+
+
+
+
+.form__text {
+  position: relative;
+  width: 140px;
+  flex-grow: 1;
+  height: 45px;
+  padding: 0px 16px;
+
+  outline: none;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+    @media (min-width: $desktop-width) {
+      height: 52px;
+  }
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid #000;
+  }
+}
+
+.form__text ~ svg {
+  position: absolute;
+  right: 15px;
+}
+
+.form__text--icon {
+  padding-right: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
+  }
+}
+
+.form__text:focus ~ svg,
+.form__text:active ~ svg {
+  color: #68b738;
+}
+
+.form__text,
+.form__text::placeholder {
   font-family: $main-font;
   font-size: 16px;
   line-height: 18px;
@@ -81,14 +133,34 @@
   }
 }
 
-.form-selection__div textarea {
+.form__text::placeholder {
+  line-height: 19px;
+
   @media (min-width: $tablet-width) {
+    line-height: 27px;
+  }
+}
+
+.form__text--textarea {
+  width: 100%;
+  height: 150px;
+  padding: 13px;
+
+  text-align: left;
+  border: 1px solid #cdcdcdcd;
+
+  resize: none;
+
+  @media (min-width: $tablet-width) {
+    height: 174px;
+
     line-height: 30px;
   }
 }
 
+
 //Задаю стили для всех label на странице формы, так как они одинаковые.
-.form-selection__div label {
+.form__label {
   font-size: 16px;
   line-height: 18px;
   color: #222;
@@ -100,21 +172,12 @@
   }
 }
 
-.form-selection__item-text input::placeholder {
-  font-family: $main-font;
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #444;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 27px;
-  }
+.form__label-text {
+  margin-right: 15px;
 }
 
 //Дополнительный контейнер для двух групп форм, на десктопе встают в линию.
-.form-selection__container-info {
+.form__group {
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: flex-start;
@@ -123,7 +186,7 @@
   }
 }
 
-.form-selection__main-info {
+.form__main-info {
   margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
@@ -136,7 +199,7 @@
   }
 }
 
-.form-selection__item-text {
+.form__item-text {
   position: relative;
   display: flex;
   align-items: center;
@@ -145,38 +208,11 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 20px;
   }
-
-  &:hover input {
-    border-color: rgba(205, 205, 205, 1);
-  }
 }
 
-.form-selection__item-text label {
-  margin-right: 15px;
-}
-
-.form-selection__item-text input {
-  position: relative;
-  width: 140px;
-  flex-grow: 1;
-  height: 45px;
-  padding: 0px 16px;
-
-  outline: none;
-  border: 1px solid rgba(205, 205, 205, 0.5);
-
-  @media (min-width: $desktop-width) {
-    height: 52px;
-  }
-}
-
-.form-selection__item-text input:focus,
-.form-selection__item-text input:active {
-  border: 2px solid #000;
-}
 
 //Стили для группы радио.
-.form-selection__radio {
+.form__radio {
   margin-bottom: 31px;
   padding: 21px 20px;
   border-top: 1px solid #ededed;
@@ -196,16 +232,17 @@
   }
 }
 
-.form-selection__item-radio {
+.form__item-radio {
   display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
 }
 
-.form-selection__item-radio:not(:last-child) {
-  margin-bottom: 13px;
-}
 
 //кастомные радио.
-.form-selection__item-radio label {
+.form__label-radio {
   position: relative;
 
   padding: 6px 0 6px 46px;
@@ -255,22 +292,22 @@
   }
 }
 
-.form-selection__radio-input:checked + label::after {
+.form__radio:checked ~ .form__label-radio::after {
   display: block;
 }
 
 
 //Задаю состояние радио баттанов при ховере/клике
-.form-selection__radio label:hover::before {
+.form__label-radio:hover::before {
   border-color: #bababa;
 }
 
-.form-selection__radio label:active,
-.form-selection__radio input:disabled ~ label {
+.form__label-radio:active,
+.form__radio:disabled ~ .form__label-radio {
   opacity: 0.3;
 }
 
-.form-selection__item-radio input[type="radio"]:focus + label::before {
+.form__radio:focus ~ .form__label-radio::before {
   border-color: #663d15;
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -278,7 +315,7 @@
 
 
 //Стили для полей ввода с емеилом и телефоном.
-.form-selection__contact {
+.form__contact {
   margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
@@ -290,7 +327,7 @@
   }
 }
 
-.form-selection__list-contact {
+.form__list--flex {
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -299,38 +336,13 @@
   }
 }
 
-.form-selection__list-contact .form-selection__item-text {
+.form__contact .form__item-text {
   @media (min-width: $desktop-width) {
     width: 570px;
   }
 }
 
-//У двух input на странице есть эконки, задаю через модификаторы.
-.form-selection__icon-mail,
-.form-selection__icon-telephone {
-  position: absolute;
-  right: 15px;
-}
-
-.form-selection__icon-telephone {
-  right: 10px;
-}
-
-//Отсттуп в полях ввода что бы текст не заезжал на эконки.
-.form-selection__item-text--icon input {
-  padding-right: 35px;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 50px;
-  }
-}
-
-.form-selection__input-icon:focus ~ svg,
-.form-selection__input-icon:active ~ svg {
-  color: #68b738;
-}
-
-.form-selection__comment {
+.form__comment {
   margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
@@ -339,33 +351,7 @@
 }
 
 
-.form-selection__div textarea {
-  width: 100%;
-  height: 150px;
-  padding: 13px;
-
-  text-align: left;
-  border: 1px solid #cdcdcdcd;
-
-  resize: none;
-
-  @media (min-width: $tablet-width) {
-    height: 174px;
-  }
-}
-
-.form-selection__div textarea::placeholder {
-  font-size: 16px;
-  line-height: 18px;
-  color: #444;
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    line-height: 30px;
-  }
-}
-
-.form-selection__additionally {
+.form__additionally {
   margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
@@ -377,7 +363,7 @@
   }
 }
 
-.form-selection__list-additionally {
+.form__list--flex-checkbox {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-start;
@@ -385,7 +371,7 @@
   }
 }
 
-.form-selection__item-checkbox {
+.form__item-checkbox {
   display: flex;
 
   @media (min-width: $tablet-width) {
@@ -394,7 +380,7 @@
 }
 
 //Кастомные чекбоксы
-.form-selection__item-checkbox label {
+.form__label-checkbox {
   position: relative;
   padding: 6px 0 6px 46px;
 
@@ -430,25 +416,25 @@
   }
 }
 
-.form-selection__checkbox-input:checked + label::after {
+.form__checkbox:checked ~ .form__label-checkbox::after {
   display: block;
 }
 
 //Задаю состояние чекбоксов при ховере\клике
-.form-selection__item-checkbox label:hover {
+.form__label-checkbox:hover {
   &::before {
     border-color: #bababa;
   }
 }
 
-.form-selection__item-checkbox:active,
-.form-selection__item-checkbox input:disabled + label {
+.form__item-checkbox:active,
+.form__checkbox:disabled ~ .form__label-checkbox {
   opacity: 0.3;
 }
 
 
 //Пишу отступы для разных состояния, что бы при добавлении новых пунктов выглядело красиво.
-.form-selection__item-checkbox {
+.form__item-checkbox {
   @media (max-width: 767.9px) {
     margin-bottom: 13px;
   }
@@ -459,13 +445,13 @@
 }
 
 
-.form-selection__item-checkbox:nth-child(2n+1) {
+.form__item-checkbox:nth-child(2n+1) {
   @media (min-width: $tablet-width) and (max-width: 1299.9px) {
     margin-right: 125px;
   }
 }
 
-.form-selection__item-checkbox:not(:nth-child(4n)) {
+.form__item-checkbox:not(:nth-child(4n)) {
   @media (min-width: $desktop-width) {
     margin-right: 106px;
   }
@@ -473,7 +459,7 @@
 
 
 
-.form-selection__container {
+.form__container {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-start;
@@ -483,7 +469,7 @@
   }
 }
 
-.form-selection__btn {
+.form__btn {
   width: 87.5%;
   margin: 0 auto 23px;
   cursor: pointer;
@@ -499,7 +485,7 @@
   }
 }
 
-.form-selection__sup {
+.form__sup {
   display: block;
   padding: 0 20px;
   margin-bottom: 34px;
