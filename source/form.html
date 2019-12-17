@@ -13,8 +13,8 @@
        <div class="header-page__first-line">
         <a class="header-page__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1300px" srcset="img/svg/logo-desktop.svg">
-              <source media="(min-width: 768px" srcset="img/svg/logo-tablet.svg">
+            <source media="(min-width: 1300px)" srcset="img/svg/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
                 <img class="header-page__logo-image" src="img/svg/logo-mobile.svg" width="191" height="39" alt="Логотип сайта">
               </picture>
             </a>
@@ -39,6 +39,7 @@
       <section class="form">
         <div class="container">
           <div class="form__wrapper">
+            <h2 class="visually-hidden">Форма для питания</h2>
             <p class="form__description">
               Заполните анкету и мы подберем
               программу питания для вашего кота
@@ -101,7 +102,7 @@
               <fieldset class="form__field form__comment">
                 <legend class="form__title">Комментарий</legend>
                 <label>
-                  <textarea class="form__text form__text--textarea" type="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+                  <textarea class="form__text form__text--textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
                 </label>
               </fieldset>
               <fieldset class="form__field form__additionally">
@@ -140,13 +141,13 @@
               <span class="location__adress">ул. Большая <br> Конюшенная, д. 19/8 <span class="location__spb">Санкт-Петербург</span></span>
             </div>
 
-            <div class="location__map" href="#">
+            <div class="location__map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1575899315950!5m2!1sru!2sru"
                 width="320" height="360" allowfullscreen=""></iframe>
               <picture>
-                <source media="(min-width: 1300px" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+                <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-                <img class="location__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320px" height="400px" alt="Карта с адрессом">
+                <img class="location__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Карта с адрессом">
               </picture>
             </div>
           </div>
