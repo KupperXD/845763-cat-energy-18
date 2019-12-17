@@ -1,15 +1,14 @@
 .catalog__wrapper {
   @media (min-width: $tablet-width) {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
- }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
- @media (min-width: $desktop-width) {
-  justify-content: flex-start;
- }
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
 }
-
 
 .catalog__item {
   &:nth-child(n+3) {
@@ -30,7 +29,3 @@
     }
   }
 }
-
-
-
-

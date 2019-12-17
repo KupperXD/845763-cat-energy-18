@@ -24,7 +24,6 @@
 .main-nav__list {
   @include list-reset;
   @media (min-width: $tablet-width) {
-   // убрал ширину по советам наставника width: 440px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -85,20 +84,19 @@
     font-size: 20px;
     font-weight: 400;
   }
- }
+}
 
- .main-nav__link--active {
-    @media (min-width: $tablet-width) {
-      border-bottom: 2px solid #68b738;
-    }
- }
+.main-nav__link--active {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid #68b738;
+  }
+}
 
 
 // На главной странице у пунктов меню на десктопе должен быть белый цвет текста и подчёркивания, что отличается от остальных страниц.
- .main-nav__link--index {
+.main-nav__link--index {
   @media (min-width: $desktop-width) {
     color: #fff;
     border-color: #fff;
   }
- }
-
+}
