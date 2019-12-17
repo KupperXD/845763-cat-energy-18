@@ -49,19 +49,26 @@
   justify-content: space-between;
   align-items: center;
 
+  border-bottom: 1px solid #e6e6e6;
+
   @media (min-width: $tablet-width) {
+    flex-shrink: 0;
     padding: 0;
+    margin-right: 90px;
+    margin-bottom: auto;
+
     border-bottom: none;
   }
+
 }
 
 .header-page__logo {
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 }

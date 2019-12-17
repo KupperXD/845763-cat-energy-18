@@ -172,7 +172,7 @@
   }
 }
 
-.form__label-text {
+.form__label--text {
   margin-right: 15px;
 }
 
@@ -242,7 +242,7 @@
 
 
 //кастомные радио.
-.form__label-radio {
+.form__label--radio {
   position: relative;
 
   padding: 6px 0 6px 46px;
@@ -292,22 +292,22 @@
   }
 }
 
-.form__radio:checked ~ .form__label-radio::after {
+.form__radio:checked ~ .form__label--radio::after {
   display: block;
 }
 
 
 //Задаю состояние радио баттанов при ховере/клике
-.form__label-radio:hover::before {
+.form__label--radio:hover::before {
   border-color: #bababa;
 }
 
-.form__label-radio:active,
-.form__radio:disabled ~ .form__label-radio {
+.form__label--radio:active,
+.form__radio:disabled ~ .form__label--radio {
   opacity: 0.3;
 }
 
-.form__radio:focus ~ .form__label-radio::before {
+.form__radio:focus ~ .form__label--radio::before {
   border-color: #663d15;
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -380,7 +380,7 @@
 }
 
 //Кастомные чекбоксы
-.form__label-checkbox {
+.form__label--checkbox {
   position: relative;
   padding: 6px 0 6px 46px;
 
@@ -416,19 +416,19 @@
   }
 }
 
-.form__checkbox:checked ~ .form__label-checkbox::after {
+.form__checkbox:checked ~ .form__label--checkbox::after {
   display: block;
 }
 
 //Задаю состояние чекбоксов при ховере\клике
-.form__label-checkbox:hover {
+.form__label--checkbox:hover {
   &::before {
     border-color: #bababa;
   }
 }
 
 .form__item-checkbox:active,
-.form__checkbox:disabled ~ .form__label-checkbox {
+.form__checkbox:disabled ~ .form__label--checkbox {
   opacity: 0.3;
 }
 

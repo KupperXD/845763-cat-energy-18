@@ -1,6 +1,10 @@
 .main-nav--opened {
   @media (max-width: 767.9px) {
-    display: block;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  width: 100%;
   }
 }
 
