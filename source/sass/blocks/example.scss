@@ -4,10 +4,10 @@
   @media (min-width: $tablet-width) {
     position: relative;
 
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
-  &:before {
+  &::before {
     @media (min-width: $tablet-width) {
       position: absolute;
       content: "";
@@ -63,7 +63,7 @@
   font-size: 34px;
   line-height: 60px;
   font-weight: 400;
-  color: #111;
+  color: #111111;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
@@ -87,7 +87,7 @@
   line-height: 18px;
   text-align: left;
 
-  color: #444;
+  color: #444444;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 56px;
@@ -140,7 +140,7 @@
 
   font-size: 24px;
   line-height: 1;
-  color: #111;
+  color: #111111;
   text-transform: uppercase;
 
   border: 1px solid #cdcdcd;
@@ -171,7 +171,7 @@
 
   font-family: $second-font;
   font-size: 12px;
-  color: #444;
+  color: #444444;
   text-transform: none;
   text-align: center;
 
@@ -183,7 +183,7 @@
 
     font-size: 14px;
 
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   @media (min-width: $desktop-width) {
@@ -195,7 +195,7 @@
 .example__expenses-money {
   font-size: 14px;
   line-height: 20px;
-  color: #111;
+  color: #111111;
   text-align: center;
   text-transform: uppercase;
 
@@ -290,7 +290,7 @@
   @include button-reset;
   font-size: 16px;
   line-height: 20px;
-  color: #111;
+  color: #111111;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -303,16 +303,16 @@
 }
 
 .example__line {
+  position: relative;
   width: 84px;
   height: 15px;
   margin: 0 18px;
 
   border: 1px solid #cdcdcd;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    position: relative;
     width: 428px;
     height: 6px;
     margin: 0 24  px;
@@ -322,17 +322,19 @@
   }
 }
 
-.example__midnight {
+.example__toggle {
+  @include button-reset;
+  position: absolute;
   display: block;
+  top: 4px;
+  left: 6px;
   width: 35px;
   height: 6px;
-  margin: 4px 0 4px 6px;
 
   border-radius: 3px;
   background-color: #68b738;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
     top: -15px;
     left: 50%;
     width: 34px;
@@ -340,14 +342,14 @@
     margin: 0 0 0 -30px;
 
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #ffffff;
 
     @media (min-width: $desktop-width) {
       left: 60%;
     }
   }
 
-  &:before {
+  &::before {
     @media (min-width: $tablet-width) {
       position: absolute;
       content: "";

@@ -43,7 +43,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
 
@@ -79,4 +79,11 @@
   @media (min-width: $desktop-width) {
     padding: 0;
   }
+}
+
+.additionally__btn {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
 }

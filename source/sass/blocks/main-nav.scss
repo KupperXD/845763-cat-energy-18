@@ -1,10 +1,10 @@
 .main-nav--opened {
   @media (max-width: 767.9px) {
-  display: block;
-  position: absolute;
-  z-index: 10;
-  background-color: #fff;
-  width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background-color: #ffffff;
+    width: 100%;
   }
 }
 
@@ -23,6 +23,7 @@
 
 .main-nav__list {
   @include list-reset;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: flex-start;
@@ -56,7 +57,7 @@
   text-transform: uppercase;
   text-align: center;
 
-  color: #000;
+  color: #000000;
 
   &[href]:hover,
   &[href]:focus {
@@ -96,7 +97,7 @@
 // На главной странице у пунктов меню на десктопе должен быть белый цвет текста и подчёркивания, что отличается от остальных страниц.
 .main-nav__link--index {
   @media (min-width: $desktop-width) {
-    color: #fff;
-    border-color: #fff;
+    color: #ffffff;
+    border-color: #ffffff;
   }
 }

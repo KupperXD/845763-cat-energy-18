@@ -1,18 +1,18 @@
 .main-page {
   flex-grow: 1;
 
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .main-page__title {
   margin: 0;
   margin-bottom: 35px;
-  padding: 18px 22px 0px;
+  padding: 18px 22px 0;
 
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  color: #000;
+  color: #000000;
   text-align: left;
 
   @media (min-width: $tablet-width) {

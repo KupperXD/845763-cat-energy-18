@@ -32,7 +32,7 @@
   padding: 0 20px;
 
   line-height: 18px;
-  color: #111;
+  color: #111111;
   text-align: left;
   text-transform: uppercase;
 
@@ -57,7 +57,7 @@
 
   font-size: 24px;
   line-height: 1;
-  color: #111;
+  color: #111111;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
@@ -72,13 +72,13 @@
   width: 140px;
   flex-grow: 1;
   height: 45px;
-  padding: 0px 16px;
+  padding: 0 16px;
 
   outline: none;
   border: 1px solid rgba(205, 205, 205, 0.5);
 
-    @media (min-width: $desktop-width) {
-      height: 52px;
+  @media (min-width: $desktop-width) {
+    height: 52px;
   }
 
   &:hover {
@@ -87,7 +87,7 @@
 
   &:focus,
   &:active {
-    border: 2px solid #000;
+    border: 2px solid #000000;
   }
 }
 
@@ -114,7 +114,7 @@
   font-family: $main-font;
   font-size: 16px;
   line-height: 18px;
-  color: #444;
+  color: #444444;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -151,7 +151,7 @@
 .form__label {
   font-size: 16px;
   line-height: 18px;
-  color: #222;
+  color: #222222;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -214,7 +214,7 @@
   @media (min-width: $desktop-width) {
     width: 570px;
     padding: 24px 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: auto;
   }
 }
@@ -295,8 +295,7 @@
 
 .form__radio:focus ~ .form__label--radio::before {
   border-color: #663d15;
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 5px dotted blue;
 }
 
 //Стили для полей ввода с емеилом и телефоном.
@@ -358,8 +357,13 @@
 .form__item-checkbox {
   display: flex;
 
+  @media (max-width: 767.9px) {
+    margin-bottom: 13px;
+  }
+
   @media (min-width: $tablet-width) {
     width: 216px;
+    margin-bottom: 31px;
   }
 }
 
@@ -418,15 +422,6 @@
 
 
 //Пишу отступы для разных состояния, что бы при добавлении новых пунктов выглядело красиво.
-.form__item-checkbox {
-  @media (max-width: 767.9px) {
-    margin-bottom: 13px;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 31px;
-  }
-}
 
 .form__item-checkbox:nth-child(2n+1) {
   @media (min-width: $tablet-width) and (max-width: 1299.9px) {
@@ -474,7 +469,7 @@
   font-family: $second-font;
   font-size: 14px;
   line-height: 16px;
-  color: #444;
+  color: #444444;
   text-align: center;
 
   @media (min-width: $tablet-width) {

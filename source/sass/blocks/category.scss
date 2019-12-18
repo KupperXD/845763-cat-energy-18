@@ -33,8 +33,7 @@
     padding-right: 56px;
   }
 
-
-// Добавляет отступ сверху в случае если на десктопе появится больше двух карточек.
+  //Добавляет отступ сверху в случае если на десктопе появится больше двух карточек.
   &:nth-of-type(n+3) {
     @media (min-width: $desktop-width) {
       margin-top: 20px;
@@ -42,8 +41,8 @@
   }
 }
 
-// Так как в одной карточке картинка кота больше в ширину - что бы добиться соответсвию макету и что бы при переполнение этой карточки текст не залезал на картинку
-// Добавил модификатор в котором увеличил падинг справа от стандартного.
+//Так как в одной карточке картинка кота больше в ширину - что бы добиться соответсвию макету и что бы при переполнение этой карточки текст не залезал на картинку
+//Добавил модификатор в котором увеличил падинг справа от стандартного.
 .category__item--pro {
   @media (min-width: $tablet-width) and (max-width: 1299px) {
     padding-right: 310px;
@@ -58,7 +57,7 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   word-wrap: break-word;
 
@@ -95,7 +94,7 @@
 
     @media (min-width: $desktop-width) {
       top: -30px;
-      left: 0 ;
+      left: 0;
       width: 100px;
       height: 100px;
     }
@@ -114,17 +113,17 @@
     background-image: url("../img/svg/icon-cat-slim.svg");
 
     @media (min-width: $tablet-width) {
-    top: -20px;
-    left: 430px;
-    width: 141px;
-    height: 194px
+      top: -20px;
+      left: 430px;
+      width: 141px;
+      height: 194px;
     }
 
     @media (min-width: $desktop-width) {
-    top: -35px;
-    left: 16px;
-    width: 71px;
-    height: 97px;
+      top: -35px;
+      left: 16px;
+      width: 71px;
+      height: 97px;
     }
   }
 
@@ -136,17 +135,17 @@
     background-image: url("../img/svg/icon-cat-pro.svg");
 
     @media (min-width: $tablet-width) {
-    top: 55px;
-    left: 350px;
-    width: 268px;
-    height: 113px;
+      top: 55px;
+      left: 350px;
+      width: 268px;
+      height: 113px;
     }
 
     @media (min-width: $desktop-width) {
-    top: -10px;
-    left: -19px;
-    width: 134px;
-    height: 57px;
+      top: -10px;
+      left: -19px;
+      width: 134px;
+      height: 57px;
     }
   }
 }
@@ -180,7 +179,7 @@
 
   font-size: 16px;
   line-height: 16px;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -189,7 +188,7 @@
   }
 
 
-// Рисует стрелку при наведении, нужно придумать ещё трансформацию что бы было плавно и не дёргалось.
+  // Рисует стрелку при наведении, нужно придумать ещё трансформацию что бы было плавно и не дёргалось.
   &::before {
     position: absolute;
     content: "";
@@ -204,7 +203,7 @@
     transform: translateY(-50%);
   }
 
-  &:hover:before {
+  &:hover::before {
     right: 0;
     width: 35px;
     background-image: url("../img/svg/icon-right-arrow-verylong.svg");
