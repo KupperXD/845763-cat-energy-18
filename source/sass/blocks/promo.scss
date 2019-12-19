@@ -34,17 +34,18 @@
   padding-right: 20px;
 
   @media (min-width: $tablet-width) {
-  padding: 0;
-  padding-left: 90px;
-  min-height: 805px;
+    display: block;
+    padding: 0;
+    padding-bottom: 20px;
+    min-height: 708px;
+
+    z-index: 1;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 90px;
     min-height: 522px;
   }
 }
-
 
 .promo__title {
   margin: 0;
@@ -54,15 +55,16 @@
   line-height: 36px;
   font-weight: 400;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    width: 415px;
+    width: 600px;
     margin-bottom: 33px;
+    padding: 0 90px;
 
     font-size: 60px;
     line-height: 60px;
-    color: #000;
+    color: #000000;
     text-align: left;
   }
 }
@@ -79,15 +81,44 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 48px;
+    padding-left: 90px;
 
     font-size: 20px;
     line-height: 20px;
-    color: #000;
+    color: #000000;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
-    width: 300px;
+    width: 390px;
+  }
+}
+
+
+.promo__inner {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.promo__inner-image {
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin-top: -80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    top: -200px;
+    left: 50%;
+    margin-left: -110px;
   }
 }
 
@@ -97,19 +128,15 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-  position: absolute;
-   width: 709px;
-   top: 195px;
-   left: 50%;
-   margin-left: -354px;
-   z-index: -1;
+    position: relative;
+    width: 709px;
+    z-index: 1;
   }
 
   @media (min-width: $desktop-width) {
+    position: absolute;
     width: 552px;
     height: 499px;
-    top: -80px;
-    margin-left: -155px;
   }
 }
 
@@ -121,11 +148,16 @@
 
   @media (min-width: $tablet-width) {
 
+    position: relative;
     width: 240px;
+    margin-left: 90px;
     padding-top: 17px;
     padding-bottom: 15px;
 
     font-size: 20px;
     line-height: 20px;
+
+    order: -1;
+    z-index: 5;
   }
 }

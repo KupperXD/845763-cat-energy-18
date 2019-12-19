@@ -2,9 +2,11 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
- box-sizing: inherit;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   display: flex;
@@ -18,7 +20,7 @@ body {
   line-height: 1.2;
   font-weight: 400;
   font-style: normal;
-  color: #444;
+  color: #444444;
 }
 
 img {
@@ -37,6 +39,6 @@ a {
   margin: -1px;
   border: 0;
   padding: 0;
-  clip: rect( 0 0 0 0);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }

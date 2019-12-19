@@ -1,0 +1,481 @@
+.form__wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 0 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+//Контейнер для групп форм.
+.form__field {
+  min-width: 320px;
+
+  margin: 0;
+  padding: 0 20px;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.form__list {
+  @include list-reset;
+}
+
+.form__description {
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0 20px;
+
+  line-height: 18px;
+  color: #111111;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 250px 0 0;
+    margin-bottom: 69px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    padding: 0;
+  }
+}
+
+//Стили для заголовков в формах
+.form__title {
+  padding: 0;
+  margin-bottom: 30px;
+
+  font-size: 24px;
+  line-height: 1;
+  color: #111111;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+
+    font-size: 36px;
+  }
+}
+
+//Задаю стили текста для всех input на странице формы.
+.form__text {
+  position: relative;
+  width: 140px;
+  flex-grow: 1;
+  height: 45px;
+  padding: 0 16px;
+
+  outline: none;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  @media (min-width: $desktop-width) {
+    height: 52px;
+  }
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid #000000;
+  }
+}
+
+.form__text ~ svg {
+  position: absolute;
+  right: 15px;
+}
+
+.form__text--icon {
+  padding-right: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
+  }
+}
+
+.form__text:focus ~ svg,
+.form__text:active ~ svg {
+  color: #68b738;
+}
+
+.form__text,
+.form__text::placeholder {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form__text::placeholder {
+  line-height: 19px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 27px;
+  }
+}
+
+.form__text--textarea {
+  width: 100%;
+  height: 150px;
+  padding: 13px;
+
+  text-align: left;
+  border: 1px solid #cdcdcdcd;
+
+  resize: none;
+
+  @media (min-width: $tablet-width) {
+    height: 174px;
+
+    line-height: 30px;
+  }
+}
+
+//Задаю стили для всех label на странице формы, так как они одинаковые.
+.form__label {
+  font-size: 16px;
+  line-height: 18px;
+  color: #222222;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form__label--text {
+  margin-right: 15px;
+}
+
+//Дополнительный контейнер для двух групп форм, на десктопе встают в линию.
+.form__group {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: flex-start;
+    min-height: 196px;
+    margin-bottom: 53px;
+  }
+}
+
+.form__main-info {
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin-bottom: 0;
+  }
+}
+
+.form__item-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+//Стили для группы радио.
+.form__radio {
+  margin-bottom: 31px;
+  padding: 21px 20px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 79px;
+
+    border: 1px solid #ededed;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    padding: 24px 20px;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+
+.form__item-radio {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+//кастомные радио.
+.form__label--radio {
+  position: relative;
+
+  padding: 6px 0 6px 46px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0 10px 56px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    border: 1px solid #cdcdcdcd;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    display: none;
+    top: 9px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 11px;
+      left: 11px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.form__radio:checked ~ .form__label--radio::after {
+  display: block;
+}
+
+
+//Задаю состояние радио баттанов при ховере/клике
+.form__label--radio:hover::before {
+  border-color: #bababa;
+}
+
+.form__label--radio:active,
+.form__radio:disabled ~ .form__label--radio {
+  opacity: 0.3;
+}
+
+.form__radio:focus ~ .form__label--radio::before {
+  border-color: #663d15;
+  outline: 5px dotted blue;
+}
+
+//Стили для полей ввода с емеилом и телефоном.
+.form__contact {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+  }
+}
+
+.form__list--flex {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.form__contact .form__item-text {
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.form__comment {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.form__additionally {
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.form__list--flex-checkbox {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.form__item-checkbox {
+  display: flex;
+
+  @media (max-width: 767.9px) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 216px;
+    margin-bottom: 31px;
+  }
+}
+
+//Кастомные чекбоксы
+.form__label--checkbox {
+  position: relative;
+  padding: 6px 0 6px 46px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0 10px 56px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::before {
+    border: 1px solid #cdcdcd;
+  }
+
+  &::after {
+    display: none;
+    background-image: url("../img/svg/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 17px;
+  }
+}
+
+.form__checkbox:checked ~ .form__label--checkbox::after {
+  display: block;
+}
+
+//Задаю состояние чекбоксов при ховере\клике
+.form__label--checkbox:hover {
+  &::before {
+    border-color: #bababa;
+  }
+}
+
+.form__item-checkbox:active,
+.form__checkbox:disabled ~ .form__label--checkbox {
+  opacity: 0.3;
+}
+
+
+//Пишу отступы для разных состояния, что бы при добавлении новых пунктов выглядело красиво.
+
+.form__item-checkbox:nth-child(2n+1) {
+  @media (min-width: $tablet-width) and (max-width: 1299.9px) {
+    margin-right: 125px;
+  }
+}
+
+.form__item-checkbox:not(:nth-child(4n)) {
+  @media (min-width: $desktop-width) {
+    margin-right: 106px;
+  }
+}
+
+.form__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 72px;
+  }
+}
+
+.form__btn {
+  width: 87.5%;
+  margin: 0 auto 23px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 283px;
+    margin: 0;
+    margin-right: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+  }
+}
+
+.form__sup {
+  display: block;
+  padding: 0 20px;
+  margin-bottom: 34px;
+
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+  }
+}

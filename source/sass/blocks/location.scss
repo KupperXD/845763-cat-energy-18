@@ -3,7 +3,7 @@
 }
 
 .location--bg-white {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .location__wrapper {
@@ -21,11 +21,11 @@
 
 .location__adress-div {
   display: flex;
-  padding: 0px 20px 26px;
+  padding: 0 20px 26px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 58px;
-    padding: 0 71px;
+    width: 708px;
+    margin: 0 auto 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,10 +36,9 @@
     padding: 69px 90px 59px 76px;
     margin-bottom: 0;
 
-    background-color: #fff;
+    background-color: #ffffff;
 
     z-index: 10;
-
   }
 }
 
@@ -50,7 +49,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  color: #111;
+  color: #111111;
   text-align: left;
   text-transform: uppercase;
 
@@ -60,7 +59,6 @@
     font-size: 20px;
     line-height: 25px;
   }
-
 }
 
 .location__adress {
@@ -69,11 +67,10 @@
   font-family: $second-font;
   font-size: 14px;
   line-height: 20px;
-  color: #444;
+  color: #444444;
   text-align: left;
 
   @media (min-width: $tablet-width) {
-    width: 155px;
 
     font-size: 16px;
     text-align: right;
@@ -123,9 +120,5 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     margin: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-   // width: 1440px;
   }
 }

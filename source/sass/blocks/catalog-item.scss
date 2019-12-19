@@ -74,7 +74,7 @@
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -87,15 +87,12 @@
 .catalog-item__list {
   width: 100%;
   border-collapse: collapse;
-
-  @media (min-width: $tablet-width) {
-  }
 }
 
 .catalog-item__list tr {
   @media (min-width: $tablet-width) {
-   border-bottom: 1px solid #cdcdcd;
- }
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .catalog-item__value,
