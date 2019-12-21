@@ -38,6 +38,7 @@ gulp.task("images", function () {
     .pipe(imagemin([
       imagemin.optipng({optimizationlevel: 3}),
       imagemin.jpegtran({progressiv: true}),
+      imagemin.svgo(),
       ]))
     .pipe(gulp.dest("build/img"));
 });
