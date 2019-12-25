@@ -3,7 +3,7 @@
   align-content: center;
 
   &::after {
-    content: '';
+    content: "";
     position: relative;
     top: 12px;
     right: -20px;
@@ -21,7 +21,7 @@
 
   &::before {
     @media (min-width: $tablet-width) {
-      content: '';
+      content: "";
       position: relative;
       top: 21px;
       left: -30px;
