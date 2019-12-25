@@ -1,6 +1,6 @@
 .form__wrapper {
   @media (min-width: $tablet-width) {
-    padding: 0 37px;
+    padding: 0 37px 0 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,7 +29,7 @@
 .form__description {
   margin: 0;
   margin-bottom: 39px;
-  padding: 0 20px;
+  padding: 0 40px 0 20px;
 
   line-height: 18px;
   color: #111111;
@@ -38,7 +38,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 250px 0 0;
-    margin-bottom: 69px;
+    margin-bottom: 67px;
 
     font-size: 20px;
     line-height: 30px;
@@ -46,6 +46,7 @@
 
   @media (min-width: $desktop-width) {
     width: 350px;
+    margin-bottom: 66px;
     padding: 0;
   }
 }
@@ -53,16 +54,26 @@
 //Стили для заголовков в формах
 .form__title {
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   font-size: 24px;
   line-height: 1;
   color: #111111;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 74px;
 
     font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
+
+  &--additionally {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 57px;
+    }
   }
 }
 
@@ -77,8 +88,8 @@
   outline: none;
   border: 1px solid rgba(205, 205, 205, 0.5);
 
-  @media (min-width: $desktop-width) {
-    height: 52px;
+  @media (min-width: $tablet-width) {
+    height: 50px;
   }
 
   &:hover {
@@ -124,6 +135,7 @@
 
 .form__text::placeholder {
   line-height: 19px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     line-height: 27px;
@@ -142,6 +154,7 @@
 
   @media (min-width: $tablet-width) {
     height: 174px;
+    padding-left: 20px;
 
     line-height: 30px;
   }
@@ -161,7 +174,28 @@
 }
 
 .form__label--text {
-  margin-right: 15px;
+  margin-right: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 17px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.form__label--text-connection {
+  margin-right: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 19px;
+  }
 }
 
 //Дополнительный контейнер для двух групп форм, на десктопе встают в линию.
@@ -175,10 +209,10 @@
 }
 
 .form__main-info {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: $desktop-width) {
@@ -193,6 +227,10 @@
   align-items: center;
   margin-bottom: 15px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 21.5px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 20px;
   }
@@ -200,20 +238,22 @@
 
 //Стили для группы радио.
 .form__radio {
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   padding: 21px 20px;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 79px;
+    padding-left: 31px;
+    padding-top: 25px;
 
     border: 1px solid #ededed;
   }
 
   @media (min-width: $desktop-width) {
     width: 570px;
-    padding: 24px 20px;
+    padding: 24px 27px;
     margin-bottom: 0;
     margin-left: auto;
   }
@@ -300,14 +340,14 @@
 
 //Стили для полей ввода с емеилом и телефоном.
 .form__contact {
-  margin-bottom: 31px;
+  margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 51px;
+    margin-bottom: 50px;
   }
 }
 
@@ -327,18 +367,18 @@
 }
 
 .form__comment {
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 69px;
+    margin-bottom: 64px;
   }
 }
 
 .form__additionally {
-  margin-bottom: 18px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -420,18 +460,22 @@
   opacity: 0.3;
 }
 
+.form__checkbox:focus ~ .form__label--checkbox::before {
+  border-color: #663d15;
+  outline: 5px dotted blue;
+}
 
 //Пишу отступы для разных состояния, что бы при добавлении новых пунктов выглядело красиво.
 
 .form__item-checkbox:nth-child(2n+1) {
   @media (min-width: $tablet-width) and (max-width: 1299.9px) {
-    margin-right: 125px;
+    margin-right: 129px;
   }
 }
 
 .form__item-checkbox:not(:nth-child(4n)) {
   @media (min-width: $desktop-width) {
-    margin-right: 106px;
+    margin-right: 110px;
   }
 }
 
@@ -443,28 +487,41 @@
 
     margin-bottom: 72px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 78px;
+  }
 }
 
 .form__btn {
   width: 87.5%;
-  margin: 0 auto 23px;
+  margin: 0 auto 21px;
+  padding-bottom: 9px;
   cursor: pointer;
+
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     width: 283px;
+    height: 50px;
     margin: 0;
-    margin-right: 61px;
+    margin-right: 63px;
+    padding: 10px 30px;
+
+    font-size: 20px;
   }
 
   @media (min-width: $desktop-width) {
     width: 568px;
+    margin-right: 85px;
   }
 }
 
 .form__sup {
   display: block;
   padding: 0 20px;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 
   font-family: $second-font;
   font-size: 14px;
