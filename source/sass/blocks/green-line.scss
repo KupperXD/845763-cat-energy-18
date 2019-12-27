@@ -1,33 +1,41 @@
 .green-line {
-  display: flex;
-  align-content: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
 
   &::after {
     content: "";
-    position: relative;
+    position: absolute;
     top: 12px;
-    right: -20px;
-    flex-grow: 1;
+    right: -30%;
     height: 3px;
-    width: 20px;
+    width: 100%;
     background-color: #68b738;
+    z-index: -1;
 
     @media (min-width: $tablet-width) {
-      top: 21px;
-      right: -30px;
-      width: 30px;
+      top: 21.5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -10%;
     }
   }
 
   &::before {
     @media (min-width: $tablet-width) {
       content: "";
-      position: relative;
-      top: 21px;
-      left: -30px;
+      position: absolute;
+      top: 21.5px;
+      right: 99%;
       height: 3px;
-      width: 30px;
+      width: 100%;
       background-color: #68b738;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 103%;
     }
   }
 }
