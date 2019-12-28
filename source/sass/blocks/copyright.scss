@@ -6,19 +6,22 @@
 
 .copyright__link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   font-family: $second-font;
   font-size: 16px;
   line-height: 16px;
-  color: #444;
+  color: #444444;
 
-  &:hover path {
+  &:hover .copyright__logo {
     fill: #68b738;
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.copyright__logo {
+  margin-left: auto;
 }

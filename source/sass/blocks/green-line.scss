@@ -1,0 +1,41 @@
+.green-line {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: -30%;
+    height: 3px;
+    width: 100%;
+    background-color: #68b738;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      top: 21.5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -10%;
+    }
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 21.5px;
+      right: 99%;
+      height: 3px;
+      width: 100%;
+      background-color: #68b738;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 103%;
+    }
+  }
+}

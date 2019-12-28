@@ -15,13 +15,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 58px;
+    padding-top: 42px;
     padding-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
   }
 }
 
 .footer-page__logo {
   display: block;
+  flex-shrink: 0;
   margin-bottom: 30px;
 
   text-align: center;
@@ -36,15 +41,18 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
 .footer-page__social {
-  margin-bottom: 23px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
 }
 
+.footer-page__copyright {
+  flex-shrink: 0;
+}

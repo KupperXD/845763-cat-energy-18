@@ -15,7 +15,7 @@
 
 .category__item {
   margin-bottom: 20px;
-  padding: 25px 22px;
+  padding: 30px 22px 20px 19px;
 
   background-color: #f2f2f2;
 
@@ -24,7 +24,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 81px 275px 62px 55px;
+    padding: 79px 275px 59px 53px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,8 +34,7 @@
     padding-right: 56px;
   }
 
-
-// Добавляет отступ сверху в случае если на десктопе появится больше двух карточек.
+  //Добавляет отступ сверху в случае если на десктопе появится больше двух карточек.
   &:nth-of-type(n+3) {
     @media (min-width: $desktop-width) {
       margin-top: 20px;
@@ -42,43 +42,44 @@
   }
 }
 
-// Так как в одной карточке картинка кота больше в ширину - что бы добиться соответсвию макету и что бы при переполнение этой карточки текст не залезал на картинку
-// Добавил модификатор в котором увеличил падинг справа от стандартного.
+//Так как в одной карточке картинка кота больше в ширину - что бы добиться соответсвию макету и что бы при переполнение этой карточки текст не залезал на картинку
+//Добавил модификатор в котором увеличил падинг справа от стандартного.
 .category__item--pro {
   @media (min-width: $tablet-width) and (max-width: 1299px) {
-    padding-right: 310px;
+    padding-right: 315px;
   }
 }
 
 .category__title {
   position: relative;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   padding-left: 72px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   word-wrap: break-word;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
     padding: 0;
     font-size: 36px;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 75px;
-    padding-left: 156px;
+    margin-bottom: 73px;
+    padding-left: 160px;
   }
 
   &::before,
   &::after {
     position: absolute;
     content: "";
-    top: -8px;
-    left: 0;
+    top: -6px;
+    left: 3px;
   }
 
   &::before {
@@ -88,14 +89,15 @@
     border-radius: 50%;
 
     @media (min-width: $tablet-width) {
-      left: 400px;
+      top: 12px;
+      left: 393px;
       width: 200px;
       height: 200px;
     }
 
     @media (min-width: $desktop-width) {
       top: -30px;
-      left: 0 ;
+      left: 0;
       width: 100px;
       height: 100px;
     }
@@ -107,46 +109,46 @@
   }
 
   &--slim::after {
-    top: -10px;
-    left: 8px;
+    top: -9px;
+    left: 11px;
     width: 35px;
     height: 49px;
     background-image: url("../img/svg/icon-cat-slim.svg");
 
     @media (min-width: $tablet-width) {
-    top: -20px;
-    left: 430px;
-    width: 141px;
-    height: 194px
+      top: 2px;
+      left: 423px;
+      width: 141px;
+      height: 194px;
     }
 
     @media (min-width: $desktop-width) {
-    top: -35px;
-    left: 16px;
-    width: 71px;
-    height: 97px;
+      top: -35px;
+      left: 16px;
+      width: 71px;
+      height: 97px;
     }
   }
 
   &--pro::after {
-    left: -9px;
-    top: 5px;
+    left: -6px;
+    top: 4px;
     width: 67px;
     height: 28px;
     background-image: url("../img/svg/icon-cat-pro.svg");
 
     @media (min-width: $tablet-width) {
-    top: 55px;
-    left: 350px;
-    width: 268px;
-    height: 113px;
+      top: 58px;
+      left: 358px;
+      width: 268px;
+      height: 113px;
     }
 
     @media (min-width: $desktop-width) {
-    top: -10px;
-    left: -19px;
-    width: 134px;
-    height: 57px;
+      top: -10px;
+      left: -19px;
+      width: 134px;
+      height: 57px;
     }
   }
 }
@@ -154,14 +156,14 @@
 .category__description {
   margin: 0;
   margin-bottom: 20px;
-  padding-bottom: 23px;
+  padding-bottom: 27px;
 
   font-family: $second-font;
 
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 61px;
+    margin-bottom: 56px;
     padding: 0;
     font-size: 16px;
     line-height: 24px;
@@ -170,7 +172,7 @@
 
   @media (min-width: $desktop-width) {
     width: 462px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 }
 
@@ -180,7 +182,7 @@
 
   font-size: 16px;
   line-height: 16px;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -189,11 +191,11 @@
   }
 
 
-// Рисует стрелку при наведении, нужно придумать ещё трансформацию что бы было плавно и не дёргалось.
+  // Рисует стрелку при наведении, нужно придумать ещё трансформацию что бы было плавно и не дёргалось.
   &::before {
     position: absolute;
     content: "";
-    right: 10px;
+    right: 13px;
     top: 50%;
     width: 25px;
     height: 12px;
@@ -202,9 +204,13 @@
     background-position: 0 0;
 
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      right: 2px;
+    }
   }
 
-  &:hover:before {
+  &:hover::before {
     right: 0;
     width: 35px;
     background-image: url("../img/svg/icon-right-arrow-verylong.svg");

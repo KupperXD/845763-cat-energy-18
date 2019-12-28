@@ -3,13 +3,13 @@
   align-items: flex-start;
   flex-wrap: wrap;
 
-  padding: 0 20px 25px;
+  padding: 0 20px 23px;
   border: 1px solid #ededed;
 
   @media (min-width: $tablet-width) {
     width: 324px;
     padding: 0;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
 
     background-color: #f2f2f2;
   }
@@ -20,13 +20,15 @@
 }
 
 .catalog-item__link {
+  height: 144px;
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: flex-end;
     width: 324px;
     height: 208px;
-    margin-top: -90px;
-    margin-bottom: 39px;
+    margin-top: -84px;
+    margin-bottom: 37px;
   }
 }
 
@@ -47,16 +49,16 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 37px;
-    margin-bottom: 33px;
+    margin-bottom: 36px;
   }
 }
 
 .catalog-item__link-title {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 50px 28px;
+    margin: 0 50px 21px;
   }
 
   @media (min-width: $desktop-width) {
@@ -74,7 +76,7 @@
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -87,15 +89,12 @@
 .catalog-item__list {
   width: 100%;
   border-collapse: collapse;
-
-  @media (min-width: $tablet-width) {
-  }
 }
 
 .catalog-item__list tr {
   @media (min-width: $tablet-width) {
-   border-bottom: 1px solid #cdcdcd;
- }
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .catalog-item__value,
@@ -107,8 +106,8 @@
   line-height: 14px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 8px;
 
     font-size: 16px;
     line-height: 16px;
@@ -125,6 +124,7 @@
 
 .catalog-item__btn {
   width: 100%;
+  padding-bottom: 9px;
 
   font-size: 16px;
   line-height: 20px;

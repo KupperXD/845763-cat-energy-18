@@ -1,6 +1,6 @@
 .additionally {
   position: relative;
-  padding: 83px 20px 25px;
+  padding: 79px 20px 25px;
 
   border: 1px solid #ededed;
 
@@ -17,7 +17,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 45px;
+    top: 40px;
     left: 50%;
     width: 31px;
     height: 2px;
@@ -39,11 +39,12 @@
 
 .additionally__title {
   margin: 0;
+  margin-bottom: 5px;
 
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
 
@@ -61,7 +62,7 @@
 
 .additionally__description {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   font-family: $second-font;
   font-size: 12px;
@@ -81,4 +82,12 @@
   }
 }
 
+.additionally__btn {
+  padding-top: 9px;
+  padding-bottom: 9px;
 
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+}
