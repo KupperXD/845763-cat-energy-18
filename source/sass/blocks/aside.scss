@@ -28,10 +28,15 @@
   font-weight: 400;
   color: #111111;
 
+  @media (max-width: 767.9px) {
+    line-height: 30px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 79px;
 
     font-size: 36px;
+    line-height: 1;
   }
 
   @media (min-width: $desktop-width) {
@@ -40,6 +45,8 @@
   }
 
   span {
+    display: inline-block;
+
     padding-right: 22px;
     background-color: #ffffff;
 

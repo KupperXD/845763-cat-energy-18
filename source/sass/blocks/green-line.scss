@@ -7,18 +7,14 @@
     content: "";
     position: absolute;
     top: 12px;
-    right: -30%;
+    left: 0;
     height: 3px;
-    width: 100%;
+    width: 100vw;
     background-color: #68b738;
     z-index: -1;
 
     @media (min-width: $tablet-width) {
       top: 21.5px;
-    }
-
-    @media (min-width: $desktop-width) {
-      right: -10%;
     }
   }
 
@@ -27,15 +23,11 @@
       content: "";
       position: absolute;
       top: 21.5px;
-      right: 99%;
+      right: 0;
       height: 3px;
-      width: 100%;
+      width: 100vw;
       background-color: #68b738;
       z-index: -1;
-    }
-
-    @media (min-width: $desktop-width) {
-      right: 103%;
     }
   }
 }
