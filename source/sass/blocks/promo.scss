@@ -29,20 +29,20 @@
 }
 
 .promo__wrapper {
-  padding-top: 29px;
+  padding-top: 27px;
   padding-left: 20px;
   padding-right: 20px;
 
   @media (min-width: $tablet-width) {
     display: block;
     padding: 0;
-    padding-bottom: 20px;
     min-height: 708px;
 
     z-index: 1;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 19px;
     min-height: 522px;
   }
 }
@@ -59,20 +59,24 @@
 
   @media (min-width: $tablet-width) {
     width: 600px;
-    margin-bottom: 33px;
-    padding: 0 90px;
+    margin-bottom: 41px;
+    padding: 0 87px;
 
     font-size: 60px;
     line-height: 60px;
     color: #000000;
     text-align: left;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+  }
 }
 
 
 .promo__slogan {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   line-height: 14px;
   text-transform: uppercase;
@@ -81,7 +85,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 48px;
-    padding-left: 90px;
+    padding-left: 88px;
 
     font-size: 20px;
     line-height: 20px;
@@ -91,6 +95,8 @@
 
   @media (min-width: $desktop-width) {
     width: 390px;
+    margin-bottom: 54px;
+    padding-left: 80px;
   }
 }
 
@@ -107,6 +113,10 @@
 }
 
 .promo__inner-image {
+  @media (max-width: 767.9px) {
+    margin-bottom: 3px;
+  }
+
   @media (min-width: $tablet-width) {
     width: 708px;
     margin-top: -80px;
@@ -116,9 +126,9 @@
     position: absolute;
     width: 552px;
     height: 499px;
-    top: -200px;
+    top: -233px;
     left: 50%;
-    margin-left: -110px;
+    margin-left: -160px;
   }
 }
 
@@ -149,7 +159,7 @@
   @media (min-width: $tablet-width) {
 
     position: relative;
-    width: 240px;
+    width: 243px;
     margin-left: 90px;
     padding-top: 17px;
     padding-bottom: 15px;
@@ -159,5 +169,9 @@
 
     order: -1;
     z-index: 5;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 81px;
   }
 }
