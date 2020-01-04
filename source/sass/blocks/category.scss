@@ -45,7 +45,7 @@
 //Так как в одной карточке картинка кота больше в ширину - что бы добиться соответсвию макету и что бы при переполнение этой карточки текст не залезал на картинку
 //Добавил модификатор в котором увеличил падинг справа от стандартного.
 .category__item--pro {
-  @media (min-width: $tablet-width) and (max-width: 1299px) {
+  @media (min-width: $tablet-width) and (max-width: $only-tablet) {
     padding-right: 315px;
   }
 }
@@ -178,7 +178,7 @@
 
 .category__link {
   position: relative;
-  padding-right: 49px;
+  padding-right: 35px;
 
   font-size: 16px;
   line-height: 16px;
@@ -186,16 +186,17 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding-right: 50px;
+
     font-size: 20px;
     line-height: 20px;
   }
-
 
   // Рисует стрелку при наведении, нужно придумать ещё трансформацию что бы было плавно и не дёргалось.
   &::before {
     position: absolute;
     content: "";
-    right: 13px;
+    right: 0;
     top: 50%;
     width: 25px;
     height: 12px;
@@ -211,7 +212,7 @@
   }
 
   &:hover::before {
-    right: 0;
+    right: -10px;
     width: 35px;
     background-image: url("../img/svg/icon-right-arrow-verylong.svg");
 
