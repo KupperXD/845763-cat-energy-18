@@ -13,14 +13,13 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
     flex-wrap: wrap;
   }
 }
 
 .aside__title {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 
   font-family: $main-font;
   font-size: 24px;
@@ -28,10 +27,15 @@
   font-weight: 400;
   color: #111111;
 
+  @media (max-width: $only-mobile) {
+    line-height: 30px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 79px;
 
     font-size: 36px;
+    line-height: 1;
   }
 
   @media (min-width: $desktop-width) {
@@ -40,16 +44,19 @@
   }
 
   span {
+    display: inline-block;
+
     padding-right: 22px;
     background-color: #ffffff;
 
     @media (min-width: $tablet-width) {
-      padding-left: 30px;
+      padding-left: 35px;
       padding-right: 35px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-left: 0;
+      margin-left: -30px;
+      padding-left: 30px;
     }
   }
 }
@@ -195,16 +202,21 @@
   background-position: 50% 50%;
   background-color: #65a93c;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: flex-start;
+  @media (min-resolution: $retina-dpi) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
 
-    padding-top: 65px;
-    padding-bottom: 69px;
-    padding-left: 91px;
+  @media (min-width: $tablet-width) {
+    padding: 74px 0 69px;
 
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-position: 0 0;
+
+    @media (min-resolution: $retina-dpi) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -213,41 +225,20 @@
     padding: 65px 35px 44px;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
-  }
+    bacgkround-size: cover;
 
-  @media (min-resolution: 1.5dppx) {
-    background-image: url("../img/gift-photo-mobile@2x.jpg");
-    background-size: 100% auto;
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/gift-photo-tablet@2x.jpg");
-      background-size: 708px auto;
-    }
-
-    @media (min-width: $desktop-width) {
+    @media (min-resolution: $retina-dpi) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
-      background-size: 245px 100%;
+      background-size: cover;
     }
   }
 }
 
-.aside__image {
-  display: block;
-  margin: 0 auto 62px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0;
-    margin-right: 276px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 auto 55px;
-  }
-}
 
 .aside__gift {
+  position: relative;
   margin: 0;
-  padding: 0 40px;
+  padding: 125px 40px 0;
 
   font-family: $second-font;
   font-size: 16px;
@@ -256,16 +247,42 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 165px;
     padding: 0;
-    padding-top: 5px;
+    padding-left: 425px;
+    padding-right: 120px;
 
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
+    padding: 125px 0 0 0;
 
     text-align: center;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 50%;
+    margin-left: -28px;
+    width: 56px;
+    height: 61px;
+
+    background-image: url("../img/svg/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    @media (min-width: $tablet-width) {
+      left: 90px;
+      margin: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: 50%;
+      margin-left: -28px;
+    }
   }
 }

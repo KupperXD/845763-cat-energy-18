@@ -2,21 +2,21 @@
   background-color: #f2f2f2;
 
   // Задаю падинги для всего футера на мобильной ширине.
-  @media (max-width: 767px) {
+  @media (max-width: $only-mobile) {
     padding: 0 20px;
   }
 }
 
 .footer-page__wrapper {
   padding-top: 39px;
-  padding-bottom: 22px;
+  padding-bottom: 9px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 42px;
-    padding-bottom: 58px;
+    padding-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -31,12 +31,12 @@
 
   text-align: center;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.6;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 

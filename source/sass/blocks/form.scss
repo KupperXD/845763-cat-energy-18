@@ -51,7 +51,7 @@
 
   @media (min-width: $desktop-width) {
     width: 350px;
-    margin-bottom: 66px;
+    margin-bottom: 67px;
     padding: 0;
   }
 }
@@ -65,42 +65,42 @@
   line-height: 1;
   color: #111111;
 
+  @media (min-width: 767.9px) {
+    line-height: 30px;
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 74px;
+    margin-bottom: 75px;
 
     font-size: 36px;
+    line-height: 1;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 76px;
   }
 
-  &--line {
-    @media (max-width: 767.9px) {
-      line-height: 30px;
-    }
-  }
-
   &--additionally {
     @media (min-width: $tablet-width) {
-      margin-bottom: 57px;
+      margin-bottom: 56px;
     }
   }
 
   span {
+    display: inline-block;
     position: relative;
     padding-right: 22px;
     background-color: #ffffff;
+    vertical-align: top;
 
-    @media (min-width: $tablet-width) {
-      padding-left: 30px;
-      padding-right: 35px;
-      margin-left: -30px;
+    @media (max-width: 767.9px) {
+      max-width: 205px;
     }
 
-    @media (min-width: $desktop-width) {
-      padding: 0 35px 0 0;
-      margin: 0;
+    @media (min-width: $tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+      margin-left: -40px;
     }
   }
 }
@@ -232,7 +232,7 @@
     display: flex;
     align-items: flex-start;
     min-height: 196px;
-    margin-bottom: 53px;
+    margin-bottom: 50.5px;
   }
 }
 
@@ -260,7 +260,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
@@ -363,7 +363,7 @@
 
 .form__radio:focus ~ .form__label--radio::before {
   border-color: #663d15;
-  outline: 5px dotted blue;
+  outline: 3px solid #111111;
 }
 
 //Стили для полей ввода с емеилом и телефоном.
@@ -375,7 +375,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 47.5px;
   }
 }
 
@@ -406,7 +406,7 @@
   margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -425,13 +425,25 @@
 .form__item-checkbox {
   display: flex;
 
-  @media (max-width: 767.9px) {
+  @media (max-width: $only-mobile) {
     margin-bottom: 13px;
   }
 
   @media (min-width: $tablet-width) {
     width: 216px;
     margin-bottom: 31px;
+  }
+
+  &:nth-child(2n+1) {
+    @media (min-width: $tablet-width) and (max-width: $only-tablet) {
+      margin-right: 129px;
+    }
+  }
+
+  &:not(:nth-child(4n)) {
+    @media (min-width: $desktop-width) {
+      margin-right: 110px;
+    }
   }
 }
 
@@ -490,21 +502,7 @@
 
 .form__checkbox:focus ~ .form__label--checkbox::before {
   border-color: #663d15;
-  outline: 5px dotted blue;
-}
-
-//Пишу отступы для разных состояния, что бы при добавлении новых пунктов выглядело красиво.
-
-.form__item-checkbox:nth-child(2n+1) {
-  @media (min-width: $tablet-width) and (max-width: 1299.9px) {
-    margin-right: 129px;
-  }
-}
-
-.form__item-checkbox:not(:nth-child(4n)) {
-  @media (min-width: $desktop-width) {
-    margin-right: 110px;
-  }
+  outline: 3px solid #111111;
 }
 
 .form__container {
@@ -513,7 +511,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    margin-bottom: 72px;
+    margin-bottom: 74px;
   }
 
   @media (min-width: $desktop-width) {

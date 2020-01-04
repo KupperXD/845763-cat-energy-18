@@ -1,25 +1,27 @@
-.main-nav--opened {
-  @media (max-width: 767.9px) {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    background-color: #ffffff;
-    width: 100%;
+.main-nav {
+  &--opened {
+    @media (max-width: $only-mobile) {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      background-color: #ffffff;
+      width: 100%;
+    }
+  }
+
+  &--close {
+    @media (max-width: $only-mobile) {
+      display: none;
+    }
+  }
+
+  &--nojs {
+    @media (max-width: $only-mobile) {
+      display: block;
+    }
   }
 }
 
-.main-nav--close {
-  @media (max-width: 767.9px) {
-    display: none;
-  }
-}
-
-
-.main-nav--nojs {
-  @media (max-width: 767.9px) {
-    display: block;
-  }
-}
 
 .main-nav__list {
   @include list-reset;
@@ -88,19 +90,17 @@
     font-size: 20px;
     font-weight: 400;
   }
-}
 
-.main-nav__link--active {
-  @media (min-width: $tablet-width) {
-    border-bottom: 2px solid #68b738;
+  &--active {
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid #68b738;
+    }
   }
-}
 
-
-// На главной странице у пунктов меню на десктопе должен быть белый цвет текста и подчёркивания, что отличается от остальных страниц.
-.main-nav__link--index {
-  @media (min-width: $desktop-width) {
-    color: #ffffff;
-    border-color: #ffffff;
+  &--index {
+    @media (min-width: $desktop-width) {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
   }
 }

@@ -90,8 +90,8 @@
               </fieldset>
               </div>
             <fieldset class="form__field form__contact">
-              <legend class="form__title form__title--line green-line">
-                <span class="form__title-crutch">Контактные данные (владельца кота)</span>
+              <legend class="form__title green-line">
+                <span>Контактные данные (владельца кота)</span>
               </legend>
               <ul class="form__list form__list--flex">
                 <li class="form__item-text form__item-text--icon">
@@ -159,9 +159,13 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1575899315950!5m2!1sru!2sru"
             width="320" height="360" allowfullscreen=""></iframe>
           <picture>
-            <source media="(min-width: 1300px)" srcset="img/map-pin-desktop@1x.png 1x, img/map-pin-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/map-pin-tablet@1x.png 1x, img/map-pin-tablet@2x.png 2x">
-            <img class="location__image" src="img/map-pin-mobile@1x.png" srcset="img/map-pin-mobile@2x.png 2x" width="320" height="400" alt="Карта с адрессом">
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/map-pin-desktop@1x.webp 1x, img/map-pin-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-pin-tablet@1x.webp 1x, img/map-pin-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-pin-mobile@1x.webp 1x, img/map-pin-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1300px)" srcset="img/map-pin-desktop@1x.jpg 1x, img/map-pin-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-pin-tablet@1x.jpg 1x, img/map-pin-tablet@2x.jpg 2x">
+            <img class="location__image" src="img/map-pin-mobile@1x.jpg" srcset="img/map-pin-mobile@2x.jpg 2x" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 ">
           </picture>
         </div>
       </div>
@@ -174,24 +178,24 @@
           <img class="footer-page__logo-image" src="img/svg/logo-footer.svg" width="130" height="25" alt="Cat Energy">
         </a>
         <ul class="footer-page__social social">
-          <li class="social__item"><a class="social__link" href="#" aria-label="CAT Energy во Вконтакте">
+          <li class="social__item"><a class="social__link" href="#" aria-label="CAT Energy во Вконтакте" target="_blank">
             <svg class="social__image social__image--vk" width="22" height="12" fill="currentColor">
               <use xlink:href="#icon-vk"></use>
             </svg>
           </a></li>
-          <li class="social__item"><a class="social__link" href="#" aria-label="CAT Energy в Инстрагрм">
+          <li class="social__item"><a class="social__link" href="#" aria-label="CAT Energy в Инстрагрм" target="_blank">
             <svg class="social__image social__image--inst" width="16" height="16" fill="currentColor">
               <use xlink:href="#icon-insta"></use>
             </svg>
           </a></li>
-          <li class="social__item"><a class="social__link" href="#" aria-label="CAT Energy в Фейсбук">
+          <li class="social__item"><a class="social__link" href="#" aria-label="CAT Energy в Фейсбук" target="_blank">
             <svg class="social__image social__image--fb" width="10" height="19" fill="currentColor">
               <use xlink:href="#icon-fb"></use>
             </svg>
           </a></li>
         </ul>
         <div class="footer-page__copyright copyright">
-          <a class="copyright__link" href="htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link" href="htmlacademy.ru/intensive/adaptive" target="_blank">
             <span>HTML Academy</span>
             <svg class="copyright__logo" xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="#666666">
               <use xlink:href="#htmlacademy"></use>
