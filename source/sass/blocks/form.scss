@@ -154,10 +154,11 @@
 }
 
 .form__text:not(:placeholder-shown):invalid {
-      padding-top: 9px;
+    padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 15px;
 
+    box-shadow: none;
     border: 2px solid #ff8282;
 
     & ~ svg {
@@ -221,7 +222,11 @@
   }
 
   &:focus {
-    padding: 12.5px 19px;
+    padding-top: 12px;
+    padding-left: 12px;
+    @media (min-width: $tablet-width){
+      padding: 12px 19px;
+    }
   }
 }
 

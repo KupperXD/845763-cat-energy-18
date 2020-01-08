@@ -58,12 +58,12 @@
                 <legend class="visually-hidden">Основная информация</legend>
                 <ul class="form__list">
                   <li class="form__item-text">
-                    <label class="form__label form__label--text" for="cat-name__label">Имя:*</label>
+                    <label class="form__label form__label--text" pattern="^[\sA-Za-zА-Яа-яЁё]{2,}$" for="cat-name__label">Имя:*</label>
                     <input class="form__text" type="text" name="cat-name" id="cat-name__label" placeholder="Барсик" required>
                   </li>
                   <li class="form__item-text">
                     <label class="form__label form__label--text" for="cat-weight__label">Вес (кг):*</label>
-                    <input class="form__text" type="text" name="cat-weight" id="cat-weight__label" placeholder="7" required>
+                    <input class="form__text" type="text" pattern="^[0-9(\-+)\s]+$" name="cat-weight" id="cat-weight__label" placeholder="7" required>
                   </li>
                   <li class="form__item-text">
                     <label class="form__label form__label--text" for="cat-age__label">Возраст (лет):</label>
@@ -96,14 +96,14 @@
               <ul class="form__list form__list--flex">
                 <li class="form__item-text form__item-text--icon">
                   <label class="form__label form__label--text-connection" for="email__label">E-mail:*</label>
-                  <input class="form__text form__text--icon" type="email" name="email" id="email__label" placeholder="kuklachev@gmail.com" required>
+                  <input class="form__text form__text--icon" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="email" name="email" id="email__label" placeholder="kuklachev@gmail.com" required>
                   <svg class="form__icon-mail" width="18" height="14" fill="currentColor">
                     <use xlink:href="#icon-mail"></use>
                   </svg>
                 </li>
                 <li class="form__item-text form__item-text--icon">
                   <label class="form__label form__label--text-connection" for="telephone__label">Телефон:*</label>
-                  <input class="form__text form__text--icon" type="tel" name="telephone" id="telephone__label" placeholder="8 (960) 900-60-90" required>
+                  <input class="form__text form__text--icon" pattern="^[0-9(\-+)\s]{1,}$" type="tel" name="telephone" id="telephone__label" placeholder="8 (960) 900-60-90" required>
                   <svg class="form__icon-telephone" width="21" height="21" fill="currentColor">
                     <use xlink:href="#icon-phone"></use>
                   </svg>
